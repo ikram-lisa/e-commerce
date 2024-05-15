@@ -1,0 +1,122 @@
+@use "./base/font.scss";
+@use "./base/variable.scss" as *;
+@use "./base/mixin.scss" as *;
+@use "./base/reset.scss" as *;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: rgb(245 245 244);
+  font-family: "Kumbh Sans", sans-serif;
+}
+/* Header */
+.cart {
+  .cart-icon {
+    position: relative;
+    img {
+      width: 20px;
+      height: auto;
+    }
+    span {
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      border-radius: 50%;
+      background-color: hsl(26, 100%, 55%);
+      color: white;
+      font-size: 12px;
+      text-align: center;
+    }
+  }
+  .avatar {
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+.separator {
+  margin: 0 auto;
+  width: 88%;
+  background-color: $blue-gray-dark;
+  margin-top: 18px;
+}
+
+/* Products List */
+// Gallery
+
+.card-wrapper {
+  width: 50%;
+  .img-display {
+    img {
+      width: 100%;
+      display: block;
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+      max-width: 418px;
+      margin: 0 auto;
+      margin-bottom: 10px;
+    }
+  }
+  .img-select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    .img-item {
+      cursor: pointer;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        display: block;
+        height: auto;
+        object-fit: cover;
+        border-radius: 11px;
+        max-width: 97px;
+        transition: all 300ms;
+        transform: scale(1);
+        border: 2px solid transparent;
+        &:hover {
+          opacity: 0.5;
+          border: 2px solid $orange-vibrant;
+          border-radius: 11px;
+          // transform: scale(1.2);
+          max-width: 97px;
+        }
+      }
+    }
+  }
+}
+
+// product-info
+
+.product-content {
+  width: 50%;
+  h2 {
+    color: $orange-vibrant;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: $blue-dark-very;
+    margin-bottom: 18px;
+  }
+  .product-detail {
+    p {
+      color: $blue-gray;
+      margin-bottom: 18px;
+      padding-right: 7rem;
+      font-size: 1.5rem;
+    }
+  }
+}

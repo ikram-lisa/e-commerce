@@ -1,0 +1,34 @@
+@use "./base/font.scss";
+@use "./base/variable.scss" as *;
+@use "./base/mixin.scss" as *;
+@use "./base/reset.scss" as *;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Header */
+.cart {
+  .cart-icon {
+    position: relative;
+    img {
+      width: 20px;
+      height: auto;
+    }
+    span {
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-radius: 50%;
+      background-color: $orange-vibrant;
+    }
+  }
+  .avatar {
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}

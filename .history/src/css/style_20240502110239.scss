@@ -1,0 +1,18 @@
+@use "./base/font.scss";
+@use "./base/variable.scss" as *;
+@use "./base/mixin.scss" as *;
+@use "./base/reset.scss" as *;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Header */
+.cart {
+  .avatar {
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
